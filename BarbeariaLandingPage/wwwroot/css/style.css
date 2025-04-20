@@ -1,0 +1,93 @@
+/* Reset e responsividade base */
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Botões */
+.btn-whatsapp {
+    background-color: #25D366;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+    .btn-whatsapp:hover {
+        background-color: #1ebe5d;
+        color: white;
+    }
+
+/* Estilização para seções com fundo escuro */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 60px 15px;
+}
+
+/* Depoimentos */
+.testimonial {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-left: 5px solid #25D366;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+footer {
+    background-color: #111;
+    padding: 30px 0;
+    color: #aaa;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+/* Ajustes para inputs, caso futuramente use */
+.form-control,
+.form-select {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+    .form-control::placeholder {
+        color: #999;
+    }
+
+    .form-control:focus {
+        border-color: #25D366;
+        box-shadow: 0 0 0 0.2rem rgba(37, 211, 102, 0.25);
+    }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

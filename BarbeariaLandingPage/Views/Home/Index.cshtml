@@ -1,0 +1,418 @@
+﻿@{
+	Layout = null;  // Não usar layout, pois é uma página única
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Barbearia São Jorge - Cortes e cuidados masculinos com qualidade e estilo em São Paulo. Agende pelo WhatsApp.">
+	<title>Barbearia São Jorge</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- Font Awesome CDN Atualizada -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom-style.css">
+	<link rel="stylesheet" href="css/loaders.css" />
+
+	<style>
+		/* Estilos originais + melhorias */
+		section {
+			scroll-margin-top: 90px; /* ou ajuste conforme a altura da sua navbar */
+		}
+
+		.info-section {
+			padding: 80px 0;
+		}
+
+			.info-section h2 {
+				font-size: 36px;
+				margin-bottom: 20px;
+			}
+
+			.info-section p {
+				font-size: 18px;
+			}
+
+		.price-section {
+			background-color: #f8f9fa;
+			padding: 50px 0;
+		}
+
+		.price-card {
+			border: 1px solid #ddd;
+			border-radius: 8px;
+			padding: 30px;
+			text-align: center;
+			margin: 20px 0;
+			transition: transform 0.3s ease;
+		}
+
+			.price-card:hover {
+				transform: translateY(-10px);
+			}
+
+		.price-count {
+			font-size: 40px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.btn-price {
+			background-color: #28a745;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+
+			.btn-price:hover {
+				background-color: #218838;
+			}
+
+		#mainNav {
+			background-color: rgba(0, 0, 0, 0.8);
+			transition: background-color 0.4s ease, padding 0.4s ease;
+			padding: 0.8rem 0;
+			z-index: 9999;
+		}
+
+			#mainNav.navbar-scrolled {
+				background-color: rgba(0, 0, 0, 0.95);
+				padding: 0.4rem 0;
+			}
+
+			#mainNav .nav-link {
+				color: #fff;
+				font-weight: 500;
+				margin-left: 1rem;
+				transition: color 0.3s ease;
+			}
+
+				#mainNav .nav-link:hover {
+					color: #f68f1e;
+				}
+
+			#mainNav .navbar-brand {
+				color: #fff;
+				font-weight: bold;
+				font-size: 1.5rem;
+			}
+
+			#mainNav .navbar-toggler {
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+
+			#mainNav .navbar-toggler-icon {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+			}
+
+		/* Melhoria acessibilidade */
+		.btn:focus {
+			outline: none;
+			box-shadow: 0 0 0 0.2rem rgba(40,167,69,.5);
+		}
+
+		iframe {
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md fixed-top navbar-dark" id="mainNav">
+		<div class="container-fluid px-5">
+			<a class="navbar-brand" href="#home">Barbearia São Jorge</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="#home" aria-current="page">
+							<i class="fas fa-home mr-1"></i> Início
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#sobre">
+							<i class="fas fa-info-circle mr-1"></i> Sobre
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#precos">
+							<i class="fas fa-cut mr-1"></i> Preços
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contato">
+							<i class="fas fa-phone-alt mr-1"></i> Contato
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+	<!-- Home Section -->
+	<section id="home" class="intro intro-bg bg-overlay parallax" style="position: relative; min-height: 100vh;">
+		<!-- Máscara escura para contraste -->
+		<div style="position:absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.6); z-index:0;"></div>
+
+		<div class="container h-100 d-flex align-items-center">
+			<div class="row w-100">
+				<div class="col-lg-8 col-md-10 caption-two-panel" style="z-index:1;">
+					<div class="intro-caption">
+						<h1 class="text-white mb-3 font-weight-bold">Bem-vindo à Barbearia São Jorge!</h1>
+						<h5 class="text-white font-weight-light mb-4">Cortes. Estilo. Personalidade.</h5>
+						<p class="text-white lead mb-0">Tradição no atendimento. Excelência nos detalhes. Sua melhor versão começa aqui.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Sobre Section -->
+	<section id="sobre" class="info-section bg-light">
+		<div class="container">
+			<div class="row align-items-center">
+				<!-- Texto -->
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<h2 class="font-weight-bold mb-4">Quem Somos</h2>
+					<p class="mb-3">A Barbearia São Jorge é um lugar onde tradição e modernidade se encontram. Oferecemos cortes, barbas e serviços personalizados para todos os tipos de clientes. Nosso objetivo é proporcionar uma experiência única e acolhedora para cada um de nossos clientes.</p>
+					<h5 class="mt-4">Qualidade e Tradição</h5>
+					<p>Nosso time é especializado em cortes clássicos e modernos, oferecendo um atendimento de excelência em um ambiente confortável e aconchegante.</p>
+					<h5 class="mt-4">Serviços Personalizados</h5>
+					<p>Cada cliente é único, e por isso, oferecemos serviços personalizados para atender às suas preferências e estilo.</p>
+				</div>
+
+				<!-- Galeria de Imagens -->
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-6 mb-4">
+							<img src="img/barbearia1.jpg" class="img-fluid rounded shadow-sm" alt="Ambiente da barbearia 1">
+						</div>
+						<div class="col-6 mb-4">
+							<img src="img/barbearia2.jpg" class="img-fluid rounded shadow-sm" alt="Ambiente da barbearia 2">
+						</div>
+						<div class="col-12">
+							<img src="img/equipe.jpg" class="img-fluid rounded shadow-sm" alt="Equipe da barbearia">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Depoimentos Section -->
+	<section id="depoimentos" class="py-5 bg-light">
+		<div class="container text-center">
+			<h2 class="mb-4" style="font-weight: 700; color: #333;">
+				O que dizem sobre nós
+			</h2>
+			<p class="lead text-muted mb-5">Confira a opinião de quem já passou por aqui:</p>
+
+			<div class="row">
+				<!-- Depoimento 1 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="border rounded p-4 h-100 shadow-sm bg-white">
+						<p class="mb-3 font-italic">“Ambiente acolhedor, profissionais incríveis. Não troco por nada!”</p>
+						<p class="text-muted mb-0"><i class="fas fa-user-circle mr-2"></i><strong>Felipe Souza</strong></p>
+					</div>
+				</div>
+
+				<!-- Depoimento 2 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="border rounded p-4 h-100 shadow-sm bg-white">
+						<p class="mb-3 font-italic">“Fui pela primeira vez e já virei cliente fiel. Recomendo demais!”</p>
+						<p class="text-muted mb-0"><i class="fas fa-user-circle mr-2"></i><strong>Marcos Pereira</strong></p>
+					</div>
+				</div>
+
+				<!-- Depoimento 3 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="border rounded p-4 h-100 shadow-sm bg-white">
+						<p class="mb-3 font-italic">“Melhor barbearia da região. Atendimento top e corte sensacional.”</p>
+						<p class="text-muted mb-0"><i class="fas fa-user-circle mr-2"></i><strong>Thiago Lima</strong></p>
+					</div>
+				</div>
+
+				<!-- Depoimento 4 -->
+				<div class="col-md-6 col-lg-3 mb-4">
+					<div class="border rounded p-4 h-100 shadow-sm bg-white">
+						<p class="mb-3 font-italic">“Barbearia São Jorge é sinônimo de qualidade. Sempre saio satisfeito.”</p>
+						<p class="text-muted mb-0"><i class="fas fa-user-circle mr-2"></i><strong>Carlos Henrique</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Preços Section -->
+	<section id="precos" class="price-section py-5 bg-light">
+		<div class="container text-center">
+			<!-- Título da seção -->
+			<h2 class="font-abril mb-5" style="font-size: 2.5rem; font-weight: 700; color: #333;">
+				<i class="fas fa-cut text-primary mr-2"></i> Serviços Recomendados
+			</h2>
+
+			<div class="row">
+				<!-- Card 1: Corte de Cabelo -->
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 shadow-sm border-0 rounded-4">
+						<div class="card-body">
+							<h3 class="mt-3 mb-3">Corte de Cabelo</h3>
+							<p class="text-muted">Corte clássico, fade ou moderno com os melhores barbeiros.</p>
+							<a href="https://wa.me/5519993817292?text=Olá! Gostaria de agendar um *Corte de Cabelo* na barbearia."
+							   target="_blank"
+							   class="btn btn-success btn-block mt-3">
+								<i class="fab fa-whatsapp mr-2"></i> Agendar via WhatsApp
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 2: Barba -->
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 shadow-sm border-0 rounded-4">
+						<div class="card-body">
+							<h3 class="mt-3 mb-3">Barba Estilizada</h3>
+							<p class="text-muted">Modelagem com navalha, hidratação e finalização premium.</p>
+							<a href="https://wa.me/5519993817292?text=Olá! Gostaria de agendar uma *Barba Estilizada* na barbearia."
+							   target="_blank"
+							   class="btn btn-success btn-block mt-3">
+								<i class="fab fa-whatsapp mr-2"></i> Agendar via WhatsApp
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 3: Combo Corte + Barba -->
+				<div class="col-md-4 mb-4">
+					<div class="card h-100 shadow-sm border-0 rounded-4">
+						<div class="card-body">
+							<h3 class="mt-3 mb-3">Combo Corte + Barba</h3>
+							<p class="text-muted">Pacote completo pra você sair com o visual renovado.</p>
+							<a href="https://wa.me/5519993817292?text=Olá! Gostaria de agendar um *Combo Corte + Barba* na barbearia."
+							   target="_blank"
+							   class="btn btn-success btn-block mt-3">
+								<i class="fab fa-whatsapp mr-2"></i> Agendar via WhatsApp
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Contato pelo WhatsApp -->
+	<section id="contato" class="contact-section py-5 text-white" style="background: linear-gradient(135deg, #222, #333);">
+		<div class="container text-center">
+			<h2 class="mb-4"><i class="fas fa-comments mr-2"></i>Agende pelo WhatsApp</h2>
+			<p class="lead">Fale conosco diretamente clicando no botão abaixo:</p>
+			<a href="https://wa.me/5519993817292?text=Olá%2C%20gostaria%20de%20agendar%20um%20horário%20na%20Barbearia%20São%20Jorge!"
+			   target="_blank"
+			   class="btn btn-success btn-lg mt-3 shadow">
+				<i class="fab fa-whatsapp fa-lg mr-2"></i> Conversar no WhatsApp
+			</a>
+		</div>
+	</section>
+
+	<!-- Espaço em branco entre as seções -->
+	<div style="height: 60px; background-color: #f8f9fa;"></div>
+
+	<!-- Como Chegar -->
+	<section class="location-section py-5 bg-light">
+		<div class="container">
+			<div class="text-center mb-5">
+				<!-- Espaço em branco -->
+				<div style="height: 100px;"></div>
+			</div>
+			<div class="row align-items-center">
+				<!-- Mapa com Menu Lateral -->
+				<div class="col-md-6 mb-4 mb-md-0">
+					<div style="border-radius: 15px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14627.504112639287!2d-46.664614!3d-23.571218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d18042096b%3A0xd80ffaf519b184d9!2sBarbearia%20Corleone%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1713630783061"
+								width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+
+				<!-- Dados do Endereço -->
+				<div class="col-md-6 text-center text-md-left mt-4 mt-md-0">
+					<h4 class="mb-3">Endereço:</h4>
+					<p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i>R. Augusta, 2077 - Cerqueira César, São Paulo - SP, 01413-100</p>
+					<p class="mb-2"><i class="fas fa-clock text-primary mr-2"></i>Seg a Sáb: 9h às 20h</p>
+					<p class="mb-4"><i class="fas fa-phone-alt text-primary mr-2"></i>(19) 99381-7292</p>
+					<a href="https://www.google.com/maps/dir/?api=1&destination=Barbearia+Corleone+SP"
+					   target="_blank"
+					   class="btn btn-outline-dark btn-lg shadow-sm">
+						<i class="fas fa-directions mr-2"></i> Ver Rotas no Google Maps
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer py-3">
+		<div class="container text-center">
+			<p>&copy; 2025 Barbearia São Jorge. Todos os direitos reservados.</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap e jQuery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Scroll suave para todos os links de âncora
+			$('a[href^="#"]').on('click', function (e) {
+				e.preventDefault();
+
+				const target = this.hash;
+				const $target = $(target);
+
+				if ($target.length) {
+					$('html, body').animate({
+						scrollTop: $target.offset().top - 80 // compensa a navbar
+					}, 1000);
+				}
+			});
+
+			// Marcar link ativo
+			$('.nav-link').on('click', function () {
+				$('.nav-link').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			// Fechar menu colapsado no mobile ao clicar
+			$('.navbar-nav>li>a').on('click', function () {
+				$('.navbar-collapse').collapse('hide');
+			});
+
+			// Aplicar estilo da navbar ao rolar
+			$(window).scroll(function () {
+				if ($("#mainNav").offset().top > 50) {
+					$("#mainNav").addClass("navbar-scrolled");
+				} else {
+					$("#mainNav").removeClass("navbar-scrolled");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
